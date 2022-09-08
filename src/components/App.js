@@ -1,12 +1,16 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
-import CommentBox from "./CommentBox";
-import CommentList from "./CommentList";
+import {Routes, Route } from "react-router-dom";
+import CommentBox from "components/CommentBox";
+import CommentList from "components/CommentList";
 
 export default () => {
   return (
-    <div>
-        <CommentBox />
-        <CommentList />
+    <div>      
+        <Routes>
+          <Route path="/post" element={<CommentBox />} />
+          <Route path="/*" element={<CommentList />} />
+        </Routes>      
     </div>
   );
 };

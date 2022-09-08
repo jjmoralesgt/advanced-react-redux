@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from 'actions';
 
 class CommentBox extends Component {
-  state = { comment: "" };
+  state = { comment: ''};
 
   handleChange = event => {
     this.setState({ comment: event.target.value})
@@ -27,7 +27,7 @@ class CommentBox extends Component {
           <button>Submit Comment</button>          
         </div>
       </form>
-      <button onClick={this.props.fetchComments}>Fectch Comments</button>
+      <button className="fetch-comments" onClick={this.props.fetchComments}>Fectch Comments</button>
       </div>
     );
   };

@@ -13,5 +13,5 @@ export function fetchComments(){
     return {
         type:FETCH_COMMENTS,
         payload: response
-    }
-}
+    };
+};
